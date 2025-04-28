@@ -1,4 +1,4 @@
-#   TodoApp-DotNetFramework-WCF-Modernized
+#   📝 TodoApp-DotNetFramework-WCF-Modernized
 
 This repository contains the source code for a Todo application, originally built with .NET Framework 4.7 and Windows Communication Foundation (WCF), and subsequently migrated to .NET 8 using CoreWCF. This migration demonstrates the process of modernizing a legacy WCF application to a contemporary, cross-platform .NET environment.
 
@@ -76,7 +76,9 @@ Before embarking on a WCF to .NET 8/CoreWCF migration, it's essential to underst
 ###   Testing Projects
 
 * `TodoServiceTestClient`: (Original) A .NET Framework console application for basic testing.
-* (Any new testing projects created during migration)
+* `TodoServiceLibrary.Tests`: A .NET Framework 4.7 MSTest project containing unit tests. **Important:** This project has older dependencies that pose migration challenges and should be updated during the migration process. Specifically:
+    * ☐   `Newtonsoft.Json, Version=4.0.0.0`: This very old version is **incompatible** with .NET 8 and must be replaced with a newer version (or ideally, migrated to `System.Text.Json`).
+    * ☐   `NSubstitute, Version=3.1.0.0`: This older version is **potentially incompatible** with .NET 8 and should be upgraded to a more recent, .NET Standard 2.0 or .NET 8 compatible version.
 
 ##   Migration Steps (Detailed)
 
