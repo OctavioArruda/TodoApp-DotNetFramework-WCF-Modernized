@@ -59,6 +59,7 @@ Before embarking on a WCF to .NET 8/CoreWCF migration, it's essential to underst
     * `ITodoService.cs`: Defines the service contract (the `ITodoService` interface).
     * `TodoService.cs`: Implements the service contract.
     * `App.config`: WCF configuration file.
+    * ☐   `DeprecatedEntityFrameworkDependency.cs`: This file contains code that uses Entity Framework 6 (specifically version 4.3.1). This is included **solely to demonstrate the challenges of migrating from EF6 to EF Core in a .NET 8 migration.** This code is not intended for production use and *will not work* in .NET 8 without significant changes.
 
 ###   Modernized .NET 8 CoreWCF Service (`TodoService` in ASP.NET Core)
 
