@@ -41,3 +41,5 @@ C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoServiceLibrary.Te
 C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoServiceLibrary.Tests\obj\Debug\TodoServ.E15FDD9E.Up2Date
 C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoServiceLibrary.Tests\obj\Debug\TodoServiceLibrary.Tests.dll
 C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoServiceLibrary.Tests\obj\Debug\TodoServiceLibrary.Tests.pdb
+C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoServiceLibrary.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoServiceLibrary.Tests\bin\Debug\EntityFramework.xml
