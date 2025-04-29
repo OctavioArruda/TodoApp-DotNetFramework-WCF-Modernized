@@ -8,7 +8,8 @@ namespace TodoServiceLibraryTestClient
     {
         static void Main(string[] args)
         {
-            TodoService service = new TodoService(); // Instantiate the service
+            var deprecatedDependencyInjectionDemo = new DeprecatedDependencyInjectionDemo();
+            TodoService service = new TodoService(deprecatedDependencyInjectionDemo); // Instantiate the service
 
             // Test operations
             TodoItem newItem = new TodoItem { Title = "Test Todo", IsCompleted = false };
