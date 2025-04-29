@@ -49,6 +49,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeprecatedDependencyInjectionDemo.cs" />
     <Compile Include="DeprecatedEntityFrameworkDependency.cs" />
     <Compile Include="ITodoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
