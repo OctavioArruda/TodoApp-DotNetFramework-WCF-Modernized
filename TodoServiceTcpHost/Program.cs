@@ -1,7 +1,7 @@
 ﻿using System;
-using System.ServiceModel; // Required for ServiceHost
+using System.ServiceModel; // Required for ServiceHost and CommunicationState
 using System.ServiceModel.Description; // Required for ServiceMetadataBehavior (if configured in code)
-using TodoServiceLibrary; // Required to reference your service implementation
+using TodoServiceLibrary; // Required to reference your service implementation and dependencies
 
 namespace TodoServiceTcpHost
 {
@@ -12,24 +12,41 @@ namespace TodoServiceTcpHost
             // --- WCF Host Implementation ---
 
             // Base Address for the NetTcp endpoint
-            // This uses the net.tcp URI scheme.
-            // Choose a port that isn't already in use (e.g., 8080).
-            // The path "TodoService" is just a convention.
             Uri baseAddress = new Uri("net.tcp://localhost:8080/TodoService");
 
-            // Create the ServiceHost instance within a using block
-            // The ServiceHost manages the lifetime of the service and its endpoints.
-            // It loads configuration from App.config by default if specified.
-            using (ServiceHost host = new ServiceHost(typeof(TodoService), baseAddress))
+            // --- Dependency Injection Setup (Manual Composition Root) ---
+            // Migration Challenge Hint:
+            // Because TodoService now uses constructor injection and lacks a
+            // parameterless constructor (due to our DI refactoring),
+            // the default ServiceHost cannot create it automatically.
+            // In .NET Framework without a DI container, you must manually
+            // create the service instance (and its dependencies) and pass
+            // that instance to the ServiceHost constructor.
+
+            Console.WriteLine("Manually creating service instance and dependencies...");
+
+            // Manually create the dependency (DeprecatedDependencyInjectionDemo)
+            // In a real-world scenario with multiple dependencies, this gets complex quickly.
+            // If DeprecatedDependencyInjectionDemo had its own dependencies, you'd create those too.
+            var demoDependency = new DeprecatedDependencyInjectionDemo();
+
+            // Manually create the service instance, injecting the dependency via the constructor.
+            var serviceInstance = new TodoService(demoDependency);
+
+            Console.WriteLine("Service instance created.");
+            // --- End Manual Composition Root ---
+
+
+            // Create the ServiceHost instance
+            // We now pass the manually created 'serviceInstance' instead of the service Type (typeof(TodoService)).
+            using (ServiceHost host = new ServiceHost(serviceInstance, baseAddress))
             {
                 try
                 {
-                    // Optional: If you didn't use configuration, you could add endpoints in code like this:
-                    // host.AddServiceEndpoint(typeof(ITodoService), new NetTcpBinding(), "");
-                    // host.AddServiceEndpoint(typeof(IMetadataExchange), MetadataExchangeBindings.CreateMexTcpBinding(), "mex");
+                    // The configuration from App.config is still loaded and applied to this host instance.
+                    // We don't need to explicitly add endpoints here because they are defined in App.config.
 
                     // Open the ServiceHost
-                    // This makes the service endpoint(s) available for clients to connect.
                     host.Open();
 
                     Console.WriteLine($"The Todo Service is ready at {baseAddress}");
@@ -37,8 +54,11 @@ namespace TodoServiceTcpHost
                     Console.ReadLine();
 
                     // Close the ServiceHost when the user presses Enter
-                    host.Close();
-                    Console.WriteLine("The Todo Service is closed.");
+                    if (host.State != CommunicationState.Faulted) // Good practice to only close if not faulted
+                    {
+                        host.Close();
+                        Console.WriteLine("The Todo Service is closed.");
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -52,13 +72,13 @@ namespace TodoServiceTcpHost
                 }
             }
 
-            // --- Migration Challenge Hint: Hosting ---
-            // In CoreWCF (.NET 8), you won't use System.ServiceModel.ServiceHost.
-            // Instead, CoreWCF services are hosted within the standard .NET Generic Host
-            // or ASP.NET Core Host. You'll configure CoreWCF endpoints and behaviors
-            // using code in your Program.cs or Startup.cs (depending on the host template),
-            // integrating with the host's dependency injection and middleware pipeline.
-            // This is a fundamental shift from the .NET Framework App.config/ServiceHost model.
+            // --- Migration Challenge Hint: Hosting with DI ---
+            // In CoreWCF (.NET 8), the built-in DI container handles this.
+            // You register your Service (TodoService) and its dependencies
+            // (DeprecatedDependencyInjectionDemo, or ideally interfaces for them)
+            // in the DI container during host startup. The CoreWCF hosting
+            // automatically resolves and creates service instances using the container
+            // as needed, eliminating this manual creation step in the host code.
         }
     }
 }
