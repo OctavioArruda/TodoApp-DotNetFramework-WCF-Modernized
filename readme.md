@@ -151,7 +151,3 @@ The migration will be considered successful if:
 * [CoreWCF Documentation](https://github.com/CoreWCF/CoreWCF)
 * [Microsoft .NET 8 Documentation](https://learn.microsoft.com/en-us/dotnet/core/)
 * *(Add links here to specific troubleshooting guides or other relevant resources as separate files in a `docs/` folder)*
-
----
-
-*(Consider adding a final section after migration detailing the CoreWCF project structure and code.)*
