@@ -33,7 +33,7 @@ namespace TodoServiceLibraryTestClient
             // (the one pointing to the .svc file in TodoServiceWeb).
             // It's likely something like "BasicHttpBinding_ITodoService" or similar.
             // Replace "Your_Actual_HTTP_Endpoint_Name_Here" with that name.
-            const string httpEndpointName = "Your_Actual_HTTP_Endpoint_Name_Here"; // <-- *** IMPORTANT: FIND THIS IN YOUR App.config ***
+            const string httpEndpointName = "BasicHttpBinding_ITodoService"; // <-- *** IMPORTANT: FIND THIS IN YOUR App.config ***
 
             string endpointName = useNetTcp ? netTcpEndpointName : httpEndpointName;
 
