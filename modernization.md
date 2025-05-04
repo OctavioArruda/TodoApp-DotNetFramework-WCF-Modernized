@@ -4,8 +4,8 @@ This document tracks the step-by-step process of migrating the .NET Framework 4.
 
 **Refer to:**
 * [`README.md`](./readme.md) for the overall project overview and high-level migration plan.
-* [`Legacy_WCF_Demo_Setup_Guide.md`](./Legacy_WCF_Demo_Setup_Guide.md) (or link to the content if not a separate file) for details on setting up and troubleshooting the original .NET Framework WCF application.
-* [`Migration_Tips_CoreWCF.md`](./Migration_Tips_CoreWCF.md) (or link to content) for a summary of key migration considerations and benefits.
+* [`Legacy_WCF_Demo_Setup_Guide.md`](./Legacy_WCF_Demo_Setup_Guide.md) for details on setting up and troubleshooting the original .NET Framework WCF application.
+* [`Migration_Tips_CoreWCF.md`](./Migration_Tips_CoreWCF.md) for a summary of key migration considerations and benefits.
 
 ---
 
