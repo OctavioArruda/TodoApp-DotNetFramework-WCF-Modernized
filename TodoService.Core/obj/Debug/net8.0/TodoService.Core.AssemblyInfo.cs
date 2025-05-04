@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: CoreWCF.EnableCoreWCFOperationInvokerGenerator(false)]
 [assembly: System.Reflection.AssemblyCompanyAttribute("TodoService.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e314f5cb1e6a04b8308806fa7009665816a97bbe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0744932f091d8d93e89956dffc61953b03cee94a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TodoService.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TodoService.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
