@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Octavio\\source\\repos\\TodoServiceLibraryModernized\\TodoService.Core\\TodoService.Core.csproj": {
-                "projectPath": "C:\\Users\\Octavio\\source\\repos\\TodoServiceLibraryModernized\\TodoService.Core\\TodoService.Core.csproj"
+              "C:\\Users\\Octavio\\source\\repos\\TodoServiceLibraryModernized\\TodoService.Core\\TodoApp.Core.csproj": {
+                "projectPath": "C:\\Users\\Octavio\\source\\repos\\TodoServiceLibraryModernized\\TodoService.Core\\TodoApp.Core.csproj"
               }
             }
           }
@@ -54,6 +54,18 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "CoreWCF.Http": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "CoreWCF.Primitives": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "SoapCore": {
+              "target": "Package",
+              "version": "[1.2.1.8, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
@@ -82,12 +94,12 @@
         }
       }
     },
-    "C:\\Users\\Octavio\\source\\repos\\TodoServiceLibraryModernized\\TodoService.Core\\TodoService.Core.csproj": {
+    "C:\\Users\\Octavio\\source\\repos\\TodoServiceLibraryModernized\\TodoService.Core\\TodoApp.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Octavio\\source\\repos\\TodoServiceLibraryModernized\\TodoService.Core\\TodoService.Core.csproj",
-        "projectName": "TodoService.Core",
-        "projectPath": "C:\\Users\\Octavio\\source\\repos\\TodoServiceLibraryModernized\\TodoService.Core\\TodoService.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Octavio\\source\\repos\\TodoServiceLibraryModernized\\TodoService.Core\\TodoApp.Core.csproj",
+        "projectName": "TodoApp.Core",
+        "projectPath": "C:\\Users\\Octavio\\source\\repos\\TodoServiceLibraryModernized\\TodoService.Core\\TodoApp.Core.csproj",
         "packagesPath": "C:\\Users\\Octavio\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Octavio\\source\\repos\\TodoServiceLibraryModernized\\TodoService.Core\\obj\\",
         "projectStyle": "PackageReference",

@@ -1,42 +1,41 @@
 ﻿using System;
 
-namespace TodoServiceLibrary
+namespace TodoApp.Core;
+
+//  This class is ONLY for demonstrating Dependency Injection migration challenges.
+//  It should NOT be used in production code.
+public class DeprecatedDependencyInjectionDemo
 {
-    //  This class is ONLY for demonstrating Dependency Injection migration challenges.
-    //  It should NOT be used in production code.
-    public class DeprecatedDependencyInjectionDemo
+    //  LegacyLogger - Represents an older component with no interface
+    public class LegacyLogger
     {
-        //  LegacyLogger - Represents an older component with no interface
-        public class LegacyLogger
+        public void Log(string message)
         {
-            public void Log(string message)
-            {
-                Console.WriteLine($"[Legacy Logger] {message}");
-            }
+            Console.WriteLine($"[Legacy Logger] {message}");
         }
+    }
 
-        //  LegacyDataAccessLayer - Represents a component that is tightly coupled
-        public class LegacyDataAccessLayer
+    //  LegacyDataAccessLayer - Represents a component that is tightly coupled
+    public class LegacyDataAccessLayer
+    {
+        public string GetData()
         {
-            public string GetData()
-            {
-                return "Data from LegacyDataAccessLayer";
-            }
+            return "Data from LegacyDataAccessLayer";
         }
+    }
 
-        private readonly LegacyLogger _logger = new LegacyLogger();
-        private readonly LegacyDataAccessLayer _dataAccess = new LegacyDataAccessLayer();
+    private readonly LegacyLogger _logger = new LegacyLogger();
+    private readonly LegacyDataAccessLayer _dataAccess = new LegacyDataAccessLayer();
 
-        public void DoSomethingWithData()
-        {
-            _logger.Log("DeprecatedDependencyInjectionDemo.DoSomethingWithData called.");
-            string data = _dataAccess.GetData();
-            Console.WriteLine($"  Data: {data}");
-        }
+    public void DoSomethingWithData()
+    {
+        _logger.Log("DeprecatedDependencyInjectionDemo.DoSomethingWithData called.");
+        string data = _dataAccess.GetData();
+        Console.WriteLine($"  Data: {data}");
+    }
 
-        public DeprecatedDependencyInjectionDemo()
-        {
-            Console.WriteLine("DeprecatedDependencyInjectionDemo created.");
-        }
+    public DeprecatedDependencyInjectionDemo()
+    {
+        Console.WriteLine("DeprecatedDependencyInjectionDemo created.");
     }
 }

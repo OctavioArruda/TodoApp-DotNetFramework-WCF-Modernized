@@ -21,7 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Legacy_WCF_Demo_Setup_Guide.md = Legacy_WCF_Demo_Setup_Guide.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoService.Core", "TodoService.Core\TodoService.Core.csproj", "{D2E60436-2FD3-4B14-A715-A452F48E5E47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.Core", "TodoService.Core\TodoApp.Core.csproj", "{D2E60436-2FD3-4B14-A715-A452F48E5E47}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.CoreHost", "TodoApp.CoreHost\TodoApp.CoreHost.csproj", "{4A0BEB69-6861-4D3B-A46C-EBA6A546FB60}"
 EndProject

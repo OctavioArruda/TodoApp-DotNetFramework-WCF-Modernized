@@ -2774,9 +2774,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Octavio\\source\\repos\\TodoServiceLibraryModernized\\TodoService.Core\\TodoService.Core.csproj",
-      "projectName": "TodoService.Core",
-      "projectPath": "C:\\Users\\Octavio\\source\\repos\\TodoServiceLibraryModernized\\TodoService.Core\\TodoService.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Octavio\\source\\repos\\TodoServiceLibraryModernized\\TodoService.Core\\TodoApp.Core.csproj",
+      "projectName": "TodoApp.Core",
+      "projectPath": "C:\\Users\\Octavio\\source\\repos\\TodoServiceLibraryModernized\\TodoService.Core\\TodoApp.Core.csproj",
       "packagesPath": "C:\\Users\\Octavio\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Octavio\\source\\repos\\TodoServiceLibraryModernized\\TodoService.Core\\obj\\",
       "projectStyle": "PackageReference",

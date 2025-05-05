@@ -1,0 +1,6 @@
+C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoService.Core\obj\Debug\net8.0\TodoApp.Core.csproj.AssemblyReference.cache
+C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoService.Core\obj\Debug\net8.0\TodoApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoService.Core\obj\Debug\net8.0\TodoApp.Core.AssemblyInfoInputs.cache
+C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoService.Core\obj\Debug\net8.0\TodoApp.Core.AssemblyInfo.cs
+C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoService.Core\obj\Debug\net8.0\TodoApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoService.Core\obj\Debug\net8.0\TodoApp.Core.sourcelink.json

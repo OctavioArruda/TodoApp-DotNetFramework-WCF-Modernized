@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity; // Entity Framework 6 - Version-specific usage is crucial!
 using System.Linq;
 
-namespace TodoServiceLibrary
+namespace TodoApp.Core
 {
     //  Dummy classes to represent database entities (simplified)
     public class Todo

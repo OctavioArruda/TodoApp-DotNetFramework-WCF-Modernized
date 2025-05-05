@@ -8,7 +8,7 @@ using CoreWCF;
  * "ITodoService" interface declares the operations our service will support (CRUD operations for a Todo list).
  * "ServiceContract" and "OperationalContract" attributed are mandadoty for WCF
  * */
-namespace TodoService.Core;
+namespace TodoApp.Core;
 
 // Data Transfer Object (DTO) - For passing Todo items
 [DataContract] // Important for WCF serialization

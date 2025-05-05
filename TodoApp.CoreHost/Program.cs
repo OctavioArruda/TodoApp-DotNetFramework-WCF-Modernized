@@ -1,8 +1,15 @@
+using SoapCore;
+using TodoApp.Core; // Ensure this namespace contains ITodoService and TodoService
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
+builder.Services.AddSoapCore(); // Add SOAP support
+
+// Register your TodoService implementation against the ITodoService interface
+builder.Services.AddTransient<ITodoService, TodoService>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -18,8 +25,17 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseRouting(); // Make sure routing is enabled
+
 app.UseAuthorization();
 
 app.MapControllers();
+
+// Explicitly cast 'app' to IApplicationBuilder
+(app as IApplicationBuilder).UseSoapEndpoint<ITodoService>(
+    "/TodoService.svc",
+    new SoapEncoderOptions(),
+    SoapSerializer.XmlSerializer
+);
 
 app.Run();
