@@ -10,6 +10,9 @@ builder.Services.AddSoapCore(); // Add SOAP support
 // Register your TodoService implementation against the ITodoService interface
 builder.Services.AddTransient<ITodoService, TodoService>();
 
+// Now that we are using .NET 8, we can register the dependency on the DI container
+builder.Services.AddTransient<DeprecatedDependencyInjectionDemo>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
