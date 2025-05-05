@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "CKxO5YV9qg+Ad0Bvu5DLR/F/r3RXerKtHdJ0Jz73LeU=",
+  "Source": "TodoApp.CoreHost",
+  "BasePath": "_content/TodoApp.CoreHost",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

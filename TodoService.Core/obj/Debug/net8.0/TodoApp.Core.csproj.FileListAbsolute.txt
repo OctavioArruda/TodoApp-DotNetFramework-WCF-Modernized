@@ -4,3 +4,10 @@ C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoService.Core\obj\
 C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoService.Core\obj\Debug\net8.0\TodoApp.Core.AssemblyInfo.cs
 C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoService.Core\obj\Debug\net8.0\TodoApp.Core.csproj.CoreCompileInputs.cache
 C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoService.Core\obj\Debug\net8.0\TodoApp.Core.sourcelink.json
+C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoService.Core\bin\Debug\net8.0\TodoApp.Core.deps.json
+C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoService.Core\bin\Debug\net8.0\TodoApp.Core.dll
+C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoService.Core\bin\Debug\net8.0\TodoApp.Core.pdb
+C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoService.Core\obj\Debug\net8.0\TodoApp.Core.dll
+C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoService.Core\obj\Debug\net8.0\refint\TodoApp.Core.dll
+C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoService.Core\obj\Debug\net8.0\TodoApp.Core.pdb
+C:\Users\Octavio\source\repos\TodoServiceLibraryModernized\TodoService.Core\obj\Debug\net8.0\ref\TodoApp.Core.dll
